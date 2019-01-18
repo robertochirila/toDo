@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -47,37 +46,37 @@ export default class Login extends Component {
   render() {
     return (
       <div className="boxed-view">
-          <div className="boxed-view__box">
-            <form
-              onSubmit={this.handleSubmit}
-              className="boxed-view__form"
-              noValidate
-            >
-              <input
-                type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.handleChange}
-                name="email"
-                className="boxed-view__input"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.handleChange}
-                name="password"
-                className="boxed-view__input"
-              />
-              <button type="submit" className="button__base login">
-                login
-              </button>
-              <Link to="/signup" className="button__base link">
-                sign up
-              </Link>
-              {this.state.error ? <p>{this.state.error}</p> : <span />}
-            </form>
-          </div>
+        <div className="boxed-view__box">
+          <form
+            onSubmit={this.handleSubmit}
+            className="boxed-view__form"
+            noValidate
+          >
+            <input
+              type="text"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              name="email"
+              className="boxed-view__input"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handleChange}
+              name="password"
+              className="boxed-view__input"
+            />
+            <button type="submit" className="button__base login">
+              login
+            </button>
+            <Link to="/signup" className="button__base link">
+              sign up
+            </Link>
+            {this.state.error ? <p>{this.state.error}</p> : <span />}
+          </form>
+        </div>
       </div>
     );
   }
